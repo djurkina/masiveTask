@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string tenants[10];
+
+
+    for (int i = 0; i < 10; ++i) {
+        std::cin >> tenants[i];
+    }
+
+    for (int i = 0; i < 3; ++i) {
+        int apartmentNumber;
+        std::cin >> apartmentNumber;
+
+        if (apartmentNumber >= 1 && apartmentNumber <= 10) {
+            std::cout << tenants[apartmentNumber - 1] << std::endl;
+        } else {
+            std::cout << "Некорректный номер квартиры." << std::endl;
+        }
+    }
+
+    return 0;
+}
+
